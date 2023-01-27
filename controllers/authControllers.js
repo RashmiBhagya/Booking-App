@@ -37,7 +37,8 @@ export const login = async(req,res,next)=>{
         .cookie("access_token",token,{
             httpOnly:true,
         })
-        .status(200).json({...otherDetails});
+        .status(200)
+        .json({...otherDetails});
     }catch(err){
      next(err)
 }
